@@ -1,0 +1,57 @@
+$color: #5ec0de;
+.input-box {
+  width: 100%;
+  text-align: center;
+  .input-box-header {
+    width: 100%;
+    font-size: 12px;
+    margin: 0;
+  }
+  .input-btn-wrapper {
+    width: 70%;
+    margin: 5px auto 0 auto;
+    .input-name-form {
+      float: left;
+      width: 150px;
+      padding: 5px;
+      margin: 0 0 0 10px;
+      font-size: 12px;
+      color: #789db7;
+      background: #f7f6ee;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+      box-sizing: border-box;
+      cursor: inherit;
+      opacity: 1;
+    }
+    .input-btn {
+      width: 50px;
+      height: 25px;
+      border: 1px solid $color;
+      border-radius: 5px;
+      color: #ffffff;
+      cursor: pointer;
+      background: $color;
+      float: right;
+    }
+    .input-btn:hover {
+      color: $color;
+      background: #ffffff;
+    }
+  }
+  .input-btn-wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .error-box {
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 100px;
+    color: red;
+    font-size: 12px;
+  }
+}

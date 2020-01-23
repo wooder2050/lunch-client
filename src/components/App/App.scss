@@ -1,0 +1,24 @@
+.app {
+  position: relative;
+  width: 1024px;
+  margin: 0 auto;
+  .main {
+    width: 100%;
+    margin-top: 20px;
+    .left-content {
+      width: 700px;
+      height: 80vh;
+      float: left;
+    }
+    .right-content {
+      width: 320px;
+      height: 80vh;
+      float: left;
+    }
+  }
+  .main::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

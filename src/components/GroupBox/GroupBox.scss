@@ -1,0 +1,72 @@
+$color: #5ec0de;
+@mixin message-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 80px 0;
+  text-align: center;
+}
+.main-box-header {
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 400;
+}
+.main-box {
+  position: relative;
+  width: 700px;
+  height: 80%;
+  border: 1px solid $color;
+  margin-bottom: 15px;
+  overflow: hidden;
+  .main-wrapper {
+    width: 720px;
+    height: 100%;
+    overflow-y: scroll;
+    .group-box {
+      width: 680px;
+      margin: 5px 10px;
+      .group-box-header {
+        float: left;
+        width: 100%;
+        margin: 0 0 5px 0;
+      }
+      .people {
+        float: left;
+        width: 75px;
+        font-size: 10px;
+        height: 30px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        padding: 8px 0 0 0;
+        text-align: center;
+        background: $color;
+        box-sizing: border-box;
+        margin: 5px;
+      }
+    }
+    .group-box::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .error-box {
+      width: 200px;
+      height: 200px;
+      color: red;
+      @include message-box;
+    }
+    .lunch-info {
+      width: 250px;
+      height: 200px;
+      font-size: 24px;
+      font-weight: bold;
+      @include message-box;
+    }
+  }
+}

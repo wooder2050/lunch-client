@@ -1,0 +1,56 @@
+$color: #5ec0de;
+
+.people-list-box {
+  width: 100%;
+  text-align: center;
+  height: 80%;
+  .people-list-header {
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 400;
+  }
+
+  .people-list-wrapper {
+    width: 200px;
+    height: 90%;
+    margin: 10px auto;
+    border: 1px solid $color;
+    text-align: left;
+    font-weight: 200;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    overflow: hidden;
+    .people-list {
+      width: 220px;
+      height: 100%;
+      overflow-y: scroll;
+      .name-list {
+        width: 160px;
+        margin: 5px 0;
+        font-size: 10px;
+        letter-spacing: 1px;
+        .name {
+          float: left;
+          text-transform: uppercase;
+        }
+        .delete-btn {
+          text-align: center;
+          float: right;
+          width: 30%;
+          cursor: pointer;
+        }
+        .delete-btn:hover {
+          color: $color;
+        }
+      }
+      .name-list::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
